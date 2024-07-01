@@ -1,0 +1,454 @@
+@media screen and (max-width: 1510px) {
+  .eventsNearList,
+  .onlineEventsContainer > .onlineEventsList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mapContainer {
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .joinMeetupContainer {
+    gap: 10px;
+  }
+  .mapContainer > .map {
+    @include widthHeight(280px, 228px);
+  }
+  .eventsNearNYInfo {
+    max-width: 350px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #selectLocation {
+    display: none;
+  }
+  .nav {
+    .navLeft {
+      gap: 15px;
+    }
+    .navRight {
+      @include topRight(14px, 24px);
+    }
+  }
+  .main {
+    padding: 64px;
+  }
+  .joinMeetupContainer {
+    .joinMeetupText {
+      h1 {
+        @include fontsizeLineheightFontWeight(25px, 30px, 800);
+      }
+    }
+  }
+  .joinMeetupSignupContainer {
+    gap: 30px;
+  }
+  .friendshipsContainer > .articles > .article {
+    width: fit-content;
+  }
+  .main2 {
+    padding: 64px;
+  }
+  .mapContainer {
+    right: 24px;
+    .map {
+      @include widthHeight(140px, 114px);
+      #closeMap {
+        @include topRight(5px, 5px);
+      }
+      .middleMap {
+        gap: 3px;
+        @include widthHeight(92px, 20px);
+        p {
+          @include fontsizeLineheight(10px, 12px);
+        }
+        img {
+          @include widthHeight(12px, 12px);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    padding: 4px 24px;
+    .navLeft {
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+      #navLogo {
+        @include widthHeight(94px, 34px);
+        align-self: flex-start;
+      }
+      .searchForm {
+        width: fit-content;
+        .searchInput {
+          width: 80vw;
+        }
+      }
+    }
+    .navRight {
+      @include topRight(6px, 7px);
+      @include fontsizeLineheight(12px, 17px);
+      gap: 18px;
+      img {
+        padding-right: 3px;
+      }
+      button {
+        @include widthHeight(71px, 30px);
+      }
+    }
+  }
+  .main {
+    padding: 30px 20px;
+  }
+  .joinMeetupContainer {
+    flex-direction: column;
+    .joinMeetupText {
+      padding: 0px;
+    }
+  }
+  .eventsNearContainer {
+    .eventsHeader {
+      .eventsHeaderLeft {
+        flex-wrap: wrap;
+      }
+      a {
+        display: none;
+      }
+    }
+  }
+  .eventsNearList,
+  .onlineEventsContainer > .onlineEventsList {
+    @include flexColumn;
+    gap: 21px;
+  }
+  .eventsNearList > .eventCard,
+  .onlineEventsContainer > .onlineEventsList > .eventCard {
+    flex-direction: row;
+    .eventCardImg {
+      @include widthHeight(136px, 126px);
+    }
+    .eventInfo {
+      justify-content: center;
+      gap: 5px;
+      .eventDate {
+        order: 1;
+        @include fontsizeLineheightFontWeight(14px, 20px, 500);
+        color: #7c6f50;
+        img {
+          display: none;
+        }
+      }
+      h2 {
+        order: 2;
+        @include fontsizeLineheightFontWeight(14px, 20px, 500);
+      }
+      .eventTypeDist {
+        order: 3;
+      }
+      .eventTicketInfo {
+        display: none;
+      }
+    }
+  }
+  .joinMeetupSignupContainer {
+    .joinMeetupDescription {
+      #handsupHiddenImg {
+        display: inline;
+        @include widthHeight(238px, 137px);
+        align-self: center;
+      }
+    }
+    #handsupImg {
+      display: none;
+    }
+  }
+  .popularCitiesContainer > .cities > .city > img {
+    @include widthHeight(153px, 153px);
+  }
+  #hiddenCity {
+    display: none;
+  }
+
+  .howMeetupWorksContainer > .howMeetupWorks > .howMeetupWorksElement {
+    height: fit-content;
+  }
+  .friendshipsContainer > .articles > .article > img {
+    @include widthHeight(360px, 183px);
+  }
+  .mapContainer {
+    display: none;
+  }
+  .main2 {
+    padding: 30px 20px;
+  }
+  .selectContainer {
+    flex-wrap: wrap;
+  }
+  .eventsNearNYCard {
+    gap: 7px;
+  }
+  .eventsNearNYInfo {
+    gap: 2px;
+  }
+  .eventCard2Img {
+    @include widthHeight(143px, 81px);
+    margin-bottom: 20px;
+  }
+  .eventsNearNYDate {
+    @include fontsizeLineheight(12px, 16px);
+  }
+  .eventsNearNYTitle {
+    @include fontsizeLineheight(12px, 16px);
+    max-width: 200px;
+  }
+  .eventsNearNYCategory {
+    @include fontsizeLineheight(12px, 16px);
+  }
+  .eventsNearNYAttend {
+    display: none;
+  }
+  .footer {
+    padding: 34px 0px;
+    padding-left: 18px;
+    .footerHeader {
+      border-bottom: none;
+      position: relative;
+      h2 {
+        padding-right: 0px;
+      }
+
+      .line {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 68%;
+      }
+    }
+    .hiddenEl {
+      display: none;
+    }
+    .footerIconsRight > img {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .joinMeetupContainer {
+    .joinMeetupText {
+      gap: 20px;
+      p {
+        @include fontsizeLineheightFontWeight(12px, 24px, 400);
+      }
+      #joinMeetupBtn {
+        display: none;
+      }
+    }
+    img {
+      @include widthHeight(215px, 153px);
+      align-self: center;
+    }
+  }
+  .eventsNearContainer {
+    gap: 11px;
+    .eventsHeader {
+      .eventsHeaderLeft {
+        gap: 5px;
+        h2 {
+          @include fontsizeLineheightFontWeight(20px, 25px, 600);
+          padding-right: 5px;
+        }
+        .eventsHeaderLeftLocation {
+          @include widthHeight(164px, 30px);
+          p {
+            @include fontsizeLineheightFontWeight(14px, 16px, 600);
+          }
+          img {
+            @include widthHeight(15px, 15px);
+          }
+        }
+      }
+    }
+    .eventsNearList {
+      .eventCardHidden {
+        display: none;
+      }
+    }
+  }
+  .eventsNearList > .eventCard,
+  .onlineEventsContainer > .onlineEventsList > .eventCard {
+    border-top: 1px solid #d9d9d9;
+    padding-top: 10px;
+    gap: 7px;
+    .eventCardImg {
+      @include widthHeight(96px, 55px);
+    }
+    .eventInfo {
+      justify-content: start;
+      gap: 2px;
+      .eventDate {
+        @include fontsizeLineheightFontWeight(9px, 12px, 500);
+      }
+      h2 {
+        @include fontsizeLineheightFontWeight(10px, 14px, 500);
+      }
+      .eventTypeDist {
+        @include fontsizeLineheightFontWeight(8px, 12px, 400);
+        .onlineEventSignInline {
+          display: flex;
+          gap: 2px;
+          img {
+            @include widthHeight(10px, 10px);
+            align-self: center;
+          }
+        }
+      }
+    }
+    .onlineEventSign {
+      display: none;
+    }
+  }
+  .onlineEventsContainer {
+    gap: 11px;
+    margin-bottom: 50px;
+    h2 {
+      @include fontsizeLineheightFontWeight(20px, 25px, 600);
+    }
+    .onlineEventsList {
+      .eventCardHidden {
+        display: none;
+      }
+    }
+  }
+  .joinMeetupSignupContainer {
+    margin-bottom: 0px;
+    padding: 15px 16px;
+    .joinMeetupDescription {
+      h2 {
+        @include fontsizeLineheightFontWeight(20px, 36px, 600);
+      }
+      p {
+        @include fontsizeLineheightFontWeight(12px, 24px, 400);
+      }
+      button {
+        align-self: center;
+        margin-bottom: 16px;
+      }
+    }
+  }
+  .topCategoriesContainer {
+    margin-bottom: 48px;
+    h2 {
+      @include fontsizeLineheightFontWeight(20px, 36px, 600);
+    }
+    .categories {
+      column-gap: 23px;
+      row-gap: 11px;
+    }
+  }
+  .popularCitiesContainer {
+    gap: 0px;
+    h2 {
+      @include fontsizeLineheightFontWeight(20px, 36px, 600);
+    }
+    p {
+      @include fontsizeLineheightFontWeight(12px, 24px, 400);
+      margin-bottom: 0px;
+    }
+    .cities {
+      gap: 18px;
+      .city {
+        gap: 18px;
+        h3 {
+          @include fontsizeLineheightFontWeight(15px, 21px, 600);
+        }
+      }
+    }
+  }
+  .howMeetupWorksContainer {
+    h2 {
+      @include fontsizeLineheightFontWeight(20px, 36px, 600);
+    }
+    .howMeetupWorks {
+      gap: 12px;
+      .howMeetupWorksElement {
+        gap: 15px;
+        padding: 15px 19px;
+        img {
+          @include widthHeight(25px, 25px);
+        }
+        .howMeetupWorksText {
+          gap: 10px;
+          h3 {
+            @include fontsizeLineheightFontWeight(12px, 15px, 600);
+          }
+          p {
+            @include fontsizeLineheightFontWeight(12px, 15px, 400);
+          }
+          a {
+            @include fontsizeLineheightFontWeight(10px, 15px, 500);
+          }
+        }
+      }
+    }
+  }
+  .friendshipsContainer {
+    h2 {
+      @include fontsizeLineheightFontWeight(20px, 36px, 600);
+    }
+    #hiddenTextFriendsh {
+      display: none;
+    }
+    .articles {
+      .article {
+        h3 {
+          @include fontsizeLineheightFontWeight(16px, 27px, 600);
+          max-width: 280px;
+        }
+        p {
+          @include fontsizeLineheightFontWeight(12px, 23px, 400);
+          max-width: 280px;
+        }
+        a {
+          @include fontsizeLineheightFontWeight(12px, 23px, 400);
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+  .filterContainer {
+    gap: 12px;
+    margin-bottom: 18px;
+    h1 {
+      @include fontsizeLineheightFontWeight(25px, 36px, 600);
+      margin-bottom: 4px;
+    }
+    p {
+      @include fontsizeLineheightFontWeight(20px, 28px, 500);
+    }
+    .selectContainer {
+      gap: 19px;
+    }
+  }
+
+  .onlineSignAbsolute {
+    display: none;
+  }
+  .onlineSignStatic {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  .footerHeader {
+    justify-content: space-between;
+    h2 {
+      text-wrap: nowrap;
+    }
+    button {
+      margin-right: 7px;
+    }
+  }
+}

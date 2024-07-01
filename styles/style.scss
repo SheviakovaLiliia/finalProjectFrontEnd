@@ -1,0 +1,605 @@
+@import "reset";
+@import "mixins";
+// ============================== NAV ================================
+.nav {
+  position: relative;
+  display: flex;
+  padding: 11px 24px;
+  .navLeft {
+    display: flex;
+    gap: 40px;
+    #navLogo {
+      cursor: pointer;
+    }
+  }
+  .navRight {
+    position: absolute;
+    @include topRight(14px, 50px);
+    @include flexDirJustAligGap(row, center, center, 22px);
+    @include fontsizeLineheight(14px, 20px);
+    a {
+      @include flexCentred;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+    img {
+      padding-right: 4px;
+    }
+    button {
+      @include borderOutlineNone;
+      @include widthHeightBackColRad(83px, 36px, #00798a, #ffffff, 8px);
+      font-weight: 500;
+    }
+  }
+}
+.searchForm {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  overflow: hidden;
+  #searchIconAbsolute {
+    position: absolute;
+    @include topLeft(13px, 13px);
+  }
+  .search {
+    @include borderOutlineNone;
+    font-size: 16px;
+    padding: 10px 37px;
+  }
+  .searchInput {
+    width: 300px;
+  }
+  #selectLocation {
+    padding: 10px 17px;
+    border-left: 1px solid #d9d9d9;
+  }
+  #selectLocation::placeholder {
+    color: black;
+    font-weight: 400;
+  }
+  .searchBtn {
+    @include borderOutlineNone;
+    background-color: #f65858;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    width: 42px;
+    padding: 10.4px 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+// ============================ MAIN ======================================
+.main {
+  @include flexColumn;
+  padding: 64px 160px;
+}
+// ========== 1 JoinMeetup Container===
+.joinMeetupContainer {
+  display: flex;
+  gap: 55px;
+  margin-bottom: 24px;
+  .joinMeetupText {
+    @include flexDirJustAligGap(column, center, start, 24px);
+    padding-top: 34px;
+    padding-bottom: 98px;
+    h1 {
+      @include fontsizeLineheightFontWeight(42px, 52px, 700);
+    }
+    p {
+      @include fontsizeLineheightFontWeight(16px, 24px, 400);
+    }
+    #joinMeetupBtn {
+      @include borderOutlineNone;
+      @include fontsizeLineheightFontWeight(16px, 24px, 400);
+      @include widthHeightBackColRad(125px, 40px, #00798a, #ffffff, 8px);
+    }
+  }
+}
+// ========== 2 eventsNear Container===
+
+.eventsNearContainer {
+  @include flexColumn;
+  gap: 24px;
+  .eventsHeader {
+    @include flexJustAlign(space-between, center);
+    .eventsHeaderLeft {
+      display: flex;
+      gap: 8px;
+      h2 {
+        @include fontsizeLineheightFontWeight(28px, 36px, 600);
+        @include flexCentred;
+        padding-right: 15px;
+      }
+      .eventsHeaderLeftLocation {
+        @include flexJustAlign(space-between, center);
+        @include widthHeightBackColRad(239px, 44px, #f2f8f9, #00798a, 8px);
+        @include fontsizeLineheightFontWeight(20px, 24px, 600);
+
+        padding: 0px 10px;
+
+        p {
+          width: fit-content;
+          padding: 0px 2px;
+        }
+        img {
+          @include widthHeight(22px, 22px);
+        }
+      }
+    }
+    a {
+      @include fontsizeLineheightFontWeight(16px, 24px, 500);
+      color: #00798a;
+      text-decoration: none;
+      padding-right: 5px;
+    }
+  }
+}
+.eventsNearList {
+  display: grid;
+  gap: 36px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 399px;
+}
+
+// === eventCard
+.eventCard {
+  @include flexColumn;
+  gap: 12px;
+  position: relative;
+  .onlineEventSignInline {
+    display: none;
+  }
+  .eventInfo {
+    @include flexColumn;
+    gap: 8px;
+    h2 {
+      @include fontsizeLineheightFontWeight(20px, 24px, 600);
+    }
+    .eventTypeDist {
+      @include fontsizeLineheightFontWeight(14px, 20px, 500);
+      color: #707070;
+    }
+    .eventDate {
+      @include fontsizeLineheightFontWeight(14px, 20px, 400);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .eventTicketInfo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      p {
+        @include fontsizeLineheightFontWeight(16px, 24px, 400);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+    }
+  }
+}
+// ========== 3 onlineEvents Container===
+
+.onlineEventsContainer {
+  @include flexColumn;
+  gap: 24px;
+  margin-top: 40px;
+  h2 {
+    @include fontsizeLineheightFontWeight(28px, 36px, 600);
+  }
+  .onlineEventsList {
+    display: grid;
+    gap: 36px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 399px;
+    .eventCard {
+      .onlineEventSign {
+        position: absolute;
+        @include topLeft(8px, 8px);
+        @include fontsizeLineheightFontWeight(12px, 16px, 500);
+        @include widthHeightBackColRad(105px, 20px, #ffffff, #707070, 4px);
+        padding-left: 4px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+  }
+}
+
+// ========== 4 joinMeetupSignup Container===
+
+.joinMeetupSignupContainer {
+  display: flex;
+  gap: 80px;
+  padding: 36px 56px;
+  margin-bottom: 64px;
+  background-color: #f7fbfc;
+  border-radius: 8px;
+  .joinMeetupDescription {
+    @include flexColumn;
+    gap: 16px;
+    justify-content: center;
+    h2 {
+      @include fontsizeLineheightFontWeight(28px, 36px, 600);
+    }
+    #handsupHiddenImg {
+      display: none;
+    }
+    p {
+      @include fontsizeLineheightFontWeight(16px, 24px, 400);
+    }
+    #signUpBtn {
+      @include borderOutlineNone;
+      @include fontsizeLineheightFontWeight(16px, 24px, 500);
+      @include widthHeightBackColRad(192px, 40px, #e32359, #ffffff, 8px);
+    }
+  }
+}
+
+// ========== 5 topCategories Container===
+
+.topCategoriesContainer {
+  @include flexColumn;
+  gap: 24px;
+  margin-bottom: 64px;
+  h2 {
+    @include fontsizeLineheightFontWeight(28px, 36px, 600);
+  }
+  .categories {
+    @include flexCentred;
+    gap: 16px;
+    flex-wrap: wrap;
+    .category {
+      @include flexDirJustAligGap(column, center, center, 6px);
+      @include widthHeight(135px, 112px);
+      background-color: #f7fbfc;
+      border-radius: 8px;
+      p {
+        @include fontsizeLineheightFontWeight(16px, 24px, 500);
+        text-align: center;
+        padding: 0px 15px;
+      }
+    }
+  }
+}
+
+// ========== 6 popularCities Container===
+
+.popularCitiesContainer {
+  @include flexColumn;
+  gap: 15px;
+  margin-bottom: 64px;
+  h2 {
+    @include fontsizeLineheightFontWeight(28px, 36px, 600);
+  }
+  p {
+    @include fontsizeLineheightFontWeight(16px, 24px, 400);
+    margin-bottom: 13px;
+  }
+  .cities {
+    @include flexCentred;
+    // display: flex;
+    flex-wrap: wrap;
+    gap: 42px;
+    .city {
+      @include flexDirJustAligGap(column, center, center, 24px);
+      h3 {
+        @include fontsizeLineheightFontWeight(20px, 28px, 600);
+      }
+    }
+  }
+}
+
+// ========== 7 howMeetupWorks Container===
+
+.howMeetupWorksContainer {
+  @include flexColumn;
+  gap: 24px;
+  margin-bottom: 64px;
+  h2 {
+    @include fontsizeLineheightFontWeight(28px, 36px, 600);
+  }
+  .howMeetupWorks {
+    // display: flex;
+    @include flexCentred;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    .howMeetupWorksElement {
+      @include flexDirJustAligGap(row, start, start, 24px);
+      @include widthHeight(580px, 180px);
+
+      padding: 32px 24px;
+      background-color: #f7fbfc;
+      border-radius: 8px;
+      .howMeetupWorksText {
+        @include flexColumn;
+        max-width: 379px;
+        gap: 16px;
+        h3 {
+          @include fontsizeLineheightFontWeight(20px, 24px, 600);
+        }
+        p {
+          @include fontsizeLineheightFontWeight(16px, 24px, 400);
+        }
+        a {
+          @include fontsizeLineheightFontWeight(16px, 24px, 500);
+          color: #00798a;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// ========== 8 friendships Container===
+
+.friendshipsContainer {
+  @include flexColumn;
+  gap: 16px;
+  margin-bottom: 53px;
+  h2 {
+    @include fontsizeLineheightFontWeight(28px, 36px, 600);
+  }
+  p {
+    @include fontsizeLineheightFontWeight(16px, 24px, 400);
+  }
+  .articles {
+    @include flexCentred;
+    flex-wrap: wrap;
+
+    gap: 32px;
+    margin-top: 12px;
+    .article {
+      @include flexColumn;
+      gap: 12px;
+      max-width: 376px;
+      img {
+        margin-bottom: 12px;
+      }
+      h3 {
+        @include fontsizeLineheightFontWeight(18px, 28px, 600);
+      }
+      p {
+        @include fontsizeLineheightFontWeight(16px, 24px, 400);
+      }
+      a {
+        @include fontsizeLineheightFontWeight(16px, 24px, 400);
+        margin-bottom: 4px;
+        color: #00798a;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// ============================ MAIN2 ======================================
+.main2 {
+  @include flexColumn;
+  padding: 64px 160px;
+  position: relative;
+  min-height: 450px;
+}
+.filterContainer {
+  @include flexColumn;
+  gap: 21px;
+  margin-bottom: 34px;
+  h1 {
+    @include fontsizeLineheightFontWeight(28px, 36px, 600);
+    margin-bottom: 4px;
+  }
+  p {
+    @include fontsizeLineheightFontWeight(20px, 28px, 500);
+    text-decoration: underline 4px solid #00798a;
+    color: #00798a;
+  }
+  .selectContainer {
+    display: flex;
+    gap: 17px;
+
+    select {
+      @include widthHeightBackColRad(200px, 46px, #f6f7f8, #212121, 40px);
+      @include borderOutlineNone;
+      @include fontsizeLineheightFontWeight(14px, 14px, 500);
+      padding: 0px 16px;
+    }
+  }
+}
+.mapContainer {
+  position: absolute;
+  @include topRight(64px, 133px);
+  p {
+    @include fontsizeLineheightFontWeight(12px, 16px, 500);
+  }
+  h2 {
+    @include fontsizeLineheightFontWeight(20px, 28px, 700);
+    margin-bottom: 14px;
+  }
+  .map {
+    position: relative;
+    @include widthHeight(350px, 285px);
+    background-image: url(../assets/images/map.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .middleMap {
+      position: absolute;
+      @include topRight(50%, 50%);
+      transform: translateX(50%);
+      @include widthHeightBackColRad(172px, 40px, #ffffff, #00798a, 8px);
+      @include flexCentred;
+      border: 2px solid #00798a;
+      gap: 8px;
+      cursor: pointer;
+      p {
+        @include fontsizeLineheightFontWeight(14px, 20px, 500);
+        color: #00798a;
+      }
+      img {
+        @include widthHeight(18px, 18px);
+      }
+    }
+    #closeMap {
+      position: absolute;
+      @include topRight(11px, 15px);
+      cursor: pointer;
+    }
+  }
+}
+.eventsNearNYContainer {
+  @include flexColumn;
+  max-width: 604px;
+  margin-bottom: 100px;
+}
+.eventsNearNYCard {
+  display: flex;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #d9d9d9;
+}
+.eventsNearNYInfo {
+  @include flexColumn;
+  gap: 4px;
+  max-width: 432px;
+}
+.eventCard2Img {
+  @include widthHeight(159px, 90px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.eventsNearNYDate {
+  @include fontsizeLineheightFontWeight(14px, 20px, 500);
+  color: #7c6f50;
+}
+.eventsNearNYTitle {
+  @include fontsizeLineheightFontWeight(16px, 24px, 500);
+}
+.eventsNearNYCategory {
+  @include fontsizeLineheightFontWeight(14px, 20px, 500);
+  color: #707070;
+}
+.eventsNearNYAttend {
+  @include fontsizeLineheightFontWeight(14px, 20px, 400);
+  color: #707070;
+  padding-top: 48px;
+  padding-bottom: 17px;
+}
+.onlineSignAbsolute {
+  position: absolute;
+  @include topLeft(8px, 8px);
+  @include widthHeightBackColRad(105px, 20px, #ffffff, #707070, 4px);
+  @include flexCentred;
+  gap: 4px;
+}
+.onlineSignAP {
+  @include fontsizeLineheightFontWeight(12px, 16px, 500);
+}
+.onlineSignAImg {
+  @include widthHeight(16px, 16px);
+}
+.onlineSignStatic {
+  display: none;
+  order: 4;
+  @include fontsizeLineheightFontWeight(8px, 8px, 500);
+}
+.onlineSignSImg {
+  @include widthHeight(9px, 9px);
+}
+// ============================ FOOTER ======================================
+
+.footer {
+  @include flexColumn;
+  background-color: #212121;
+  padding: 24px 13%; //padding calculate
+  gap: 24px;
+  .footerHeader {
+    @include flexDirJustAligGap(row, start, start, 16px);
+    padding-bottom: 25px;
+    border-bottom: 1px solid #707070;
+    color: #f6f7f8;
+
+    h2 {
+      @include fontsizeLineheightFontWeight(16px, 24px, 600);
+      padding-right: 20px;
+      align-self: center;
+    }
+    button {
+      @include widthHeightBackColRad(119px, 44px, #212121, #ffffff, 6px);
+      @include fontsizeLineheightFontWeight(16px, 24px, 600);
+      border: 2px solid #ffffff;
+    }
+    .line {
+      display: none;
+      border-color: #707070;
+    }
+  }
+  .footerLinks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .linksContainer {
+      @include flexColumn;
+      justify-content: flex-start;
+      gap: 7px;
+      h2 {
+        @include fontsizeLineheightFontWeight(16px, 24px, 400);
+
+        color: #f6f7f8;
+      }
+      a {
+        @include fontsizeLineheightFontWeight(14px, 20px, 400);
+
+        color: #c5c4c4;
+        width: fit-content;
+        cursor: pointer;
+      }
+    }
+  }
+  .footerIcons {
+    @include flexColumn;
+    gap: 12px;
+    h3 {
+      @include fontsizeLineheightFontWeight(16px, 24px, 400);
+      color: #f6f7f8;
+    }
+    .footerIconsContainer {
+      display: flex;
+      justify-content: space-between;
+      .footerIconsLeft {
+        display: flex;
+        gap: 32px;
+        img {
+          @include widthHeight(30px, 30px);
+
+          cursor: pointer;
+        }
+      }
+      .footerIconsRight {
+        display: flex;
+        gap: 22px;
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .footerClosingLinks {
+    @include fontsizeLineheightFontWeight(14px, 20px, 400);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    color: #c5c4c4;
+    cursor: pointer;
+    .footerClosingFirstLink {
+      color: #ffffff;
+    }
+  }
+}
+
+@import "media";

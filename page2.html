@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ================================= NAV ===================================== -->
+    <section class="nav">
+      <div class="navLeft">
+        <img id="navLogo" src="assets/images/MeetUpLogoNav.svg" alt="Logo" />
+        <form class="searchForm">
+          <img
+            id="searchIconAbsolute"
+            src="assets/icons/SearchGrayNav.svg"
+            alt="search"
+          />
+          <input
+            class="search searchInput"
+            type="search"
+            placeholder="Search events"
+          />
+          <input
+            type="text"
+            class="search selectLoc"
+            id="selectLocation"
+            placeholder="Mountain View, CA"
+          />
+
+          <button class="searchBtn">
+            <img src="assets/icons/SearchWhiteNav.svg" alt="search" />
+          </button>
+        </form>
+      </div>
+      <div class="navRight">
+        <a href=""><img src="assets/icons/LanguageIcon.svg" alt="" />English</a>
+        <a href="">Log in</a>
+        <button>Sign up</button>
+      </div>
+    </section>
+    <!-- ================================= MAIN2 ===================================== -->
+    <section class="main2">
+      <main class="filterContainer">
+        <h1>Events near New York, NY</h1>
+        <p>Events</p>
+        <div class="selectContainer">
+          <!-- <select name="" id="">
+            <option value="Any date">Any date</option>
+          </select> -->
+          <select name="" id="selectEventType">
+            <option value="Any type">Any type</option>
+            <option value="offline">offline</option>
+            <option value="online">online</option>
+          </select>
+          <select name="" id="selectEventDistance">
+            <option value="Any distance">Any distance</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="75">75</option>
+            <option value="100">100</option>
+            <img class="selectImg" src="assets/icons/selectIcon.svg" alt="" />
+          </select>
+          <select name="" id="selectEventCategory">
+            <option value="Any category">Any category</option>
+            <option value="Health and Wellbeing">Health and Wellbeing</option>
+            <option value="Social Activities">Social Activities</option>
+            <option value="Business">Business</option>
+            <option value="Technology">Technology</option>
+          </select>
+        </div>
+      </main>
+      <main class="mapContainer">
+        <p>Find events near</p>
+        <h2>New York, NY</h2>
+        <div class="map">
+          <div class="middleMap">
+            <p>Browse in map</p>
+            <img src="assets/icons/expandMapIcon.svg" />
+          </div>
+          <img id="closeMap" src="assets/icons/closeMapIcon.svg" />
+        </div>
+      </main>
+      <main class="eventsNearNYContainer"></main>
+    </section>
+    <!-- ================================= FOOTER ===================================== -->
+    <section class="footer">
+      <div class="footerHeader">
+        <h2>Create your own Meetup group.</h2>
+        <button>Get Started</button>
+        <hr class="line" />
+      </div>
+      <div class="footerLinks">
+        <div class="linksContainer">
+          <h2>Your Account</h2>
+          <a>Sign up</a>
+          <a>Log in</a>
+          <a>Help</a>
+          <a>Become an Affiliate</a>
+        </div>
+        <div class="linksContainer">
+          <h2>Discover</h2>
+          <a>Groups</a>
+          <a>Calendar</a>
+          <a>Topics</a>
+          <a>Cities</a>
+          <a>Online Events</a>
+          <a>Local Guides</a>
+          <a>Make Friends</a>
+        </div>
+        <div class="linksContainer">
+          <h2>Meetup</h2>
+          <a>About</a>
+          <a>Blog</a>
+          <a>Meetup Pro</a>
+          <a>Careers</a>
+          <a>Apps</a>
+          <a>Podcast</a>
+        </div>
+      </div>
+      <div class="footerIcons">
+        <h3>Follow us</h3>
+        <div class="footerIconsContainer">
+          <div class="footerIconsLeft">
+            <img src="assets/icons/facebook.svg" alt="Facebook" />
+            <img src="assets/icons/twitter.svg" alt="Twitter" />
+            <img src="assets/icons/youTube.svg" alt="YouTube" />
+            <img src="assets/icons/instagram.svg" alt="Instagram" />
+            <img src="assets/icons/tikTok.svg" alt="Tik Tok" />
+          </div>
+          <div class="footerIconsRight">
+            <img src="assets/images/googlePlay.svg" alt="Google Play" />
+            <img src="assets/images/appStore.svg" alt="App Store" />
+          </div>
+        </div>
+      </div>
+      <div class="footerClosingLinks">
+        <a class="footerClosingFirstLink">© 2024 Meetup</a>
+        <a class="hiddenEl">Terms of Service</a>
+        <a class="hiddenEl">Privacy Policy</a>
+        <a class="hiddenEl">Do Not Sell or Share My Personal Data</a>
+        <a class="hiddenEl">Cookie Policy</a>
+        <a class="hiddenEl">Help</a>
+      </div>
+    </section>
+    <script src="scripts/vars.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/functions.js"></script>
+    <script src="scripts/script2.js"></script>
+    <!-- <script src="scripts/functions.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,69 @@
+@mixin widthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin widthHeightBackColRad($width, $height, $back, $col, $radius) {
+  width: $width;
+  height: $height;
+  background-color: $back;
+  color: $col;
+  border-radius: $radius;
+}
+
+@mixin fontsizeLineheightFontWeight($size, $height, $weight) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin fontsizeLineheight($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin borderOutlineNone {
+  border: none;
+  outline: none;
+}
+
+@mixin flexDirJustAligGap($dir, $just, $align, $gap) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin flexJustAlign($just, $align) {
+  display: flex;
+  justify-content: $just;
+  align-items: $align;
+}
+@mixin flexDirJustAlig($dir, $just, $align) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexCentred {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin topRight($top, $right) {
+  top: $top;
+  right: $right;
+}
+
+@mixin topLeft($top, $left) {
+  top: $top;
+  left: $left;
+}

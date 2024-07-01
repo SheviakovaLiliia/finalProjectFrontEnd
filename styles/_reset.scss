@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 2px 2px 2px 2px black;
+  font-size: large;
+  font-weight: 800;
+}
+
+.nav,
+.main,
+.main2,
+.footer {
+  max-width: 1512px;
+  margin: 0 auto;
+}
