@@ -42,8 +42,8 @@
       </div>
       <div class="navRight">
         <a href=""><img src="assets/icons/LanguageIcon.svg" alt="" />English</a>
-        <a href="">Log in</a>
-        <button>Sign up</button>
+        <a id="openLoginModal" href="">Log in</a>
+        <button id="openSignupModalBtn">Sign up</button>
       </div>
     </section>
     <!-- ================================= MAIN2 ===================================== -->
@@ -55,20 +55,19 @@
           <!-- <select name="" id="">
             <option value="Any date">Any date</option>
           </select> -->
-          <select name="" id="selectEventType">
+          <select name="selectEventType" id="selectEventType">
             <option value="Any type">Any type</option>
             <option value="offline">offline</option>
             <option value="online">online</option>
           </select>
-          <select name="" id="selectEventDistance">
+          <select name="selectEventDistance" id="selectEventDistance">
             <option value="Any distance">Any distance</option>
             <option value="25">25</option>
             <option value="50">50</option>
             <option value="75">75</option>
             <option value="100">100</option>
-            <img class="selectImg" src="assets/icons/selectIcon.svg" alt="" />
           </select>
-          <select name="" id="selectEventCategory">
+          <select name="selectEventCategory" id="selectEventCategory">
             <option value="Any category">Any category</option>
             <option value="Health and Wellbeing">Health and Wellbeing</option>
             <option value="Social Activities">Social Activities</option>
@@ -150,6 +149,43 @@
         <a class="hiddenEl">Help</a>
       </div>
     </section>
+    <div class="modalSignUp modalHidden">
+      <div class="modalContentSignup">
+        <img
+          id="closeModalSignup"
+          src="assets/icons/closeIcon.svg"
+          alt="Close"
+        />
+        <form class="signupForm">
+          <label>First Name<input type="text" placeholder="" required /></label>
+          <label>Last Name<input type="text" placeholder="" required /></label>
+          <label>Email<input type="email" placeholder="" required /></label>
+          <label>Password<input type="text" placeholder="" required /></label>
+          <div class="modalBtns">
+            <button id="signupBtn">Sign Up</button>
+            <button id="resetSignupBtn">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modalLogin modalHidden">
+      <div class="modalContentLogin">
+        <img
+          id="closeModalLogin"
+          src="assets/icons/closeIcon.svg"
+          alt="Close"
+        />
+        <form class="loginForm">
+          <label>Email<input type="email" placeholder="" required /></label>
+          <label>Password<input type="text" placeholder="" required /></label>
+          <div class="modalBtns">
+            <button id="loginBtn">Log In</button>
+            <button id="resetLoginBtn">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <script src="scripts/vars.js"></script>
     <script src="scripts/data.js"></script>
     <script src="scripts/functions.js"></script>

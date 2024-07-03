@@ -419,6 +419,10 @@
       }
     }
   }
+  .main2 {
+    padding-right: 0px;
+    padding-left: 12px;
+  }
   .filterContainer {
     gap: 12px;
     margin-bottom: 18px;
@@ -430,10 +434,28 @@
       @include fontsizeLineheightFontWeight(20px, 28px, 500);
     }
     .selectContainer {
+      padding-bottom: 10px;
       gap: 19px;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      overflow-x: scroll;
+    }
+    .selectContainer::-webkit-scrollbar {
+      background-color: FAFAFA;
+      border-radius: 30px;
+      height: 10px;
+    }
+
+    .selectContainer::-webkit-scrollbar-thumb {
+      background-color: #7d7d7d;
+      border-radius: 30px;
+      height: 8px;
+      width: 95%;
     }
   }
-
+  .eventsNearNYContainer {
+    padding-right: 11px;
+  }
   .onlineSignAbsolute {
     display: none;
   }

@@ -13,6 +13,11 @@ button:hover {
   box-shadow: 2px 2px 2px 2px black;
   font-size: large;
   font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .nav,
@@ -54,6 +59,9 @@ button:hover {
   text-decoration: none;
   color: black;
   font-weight: 500;
+}
+.nav .navRight a:hover {
+  text-decoration: underline;
 }
 .nav .navRight img {
   padding-right: 4px;
@@ -114,6 +122,7 @@ button:hover {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  box-shadow: none;
 }
 
 .main {
@@ -157,6 +166,14 @@ button:hover {
   background-color: #00798a;
   color: #ffffff;
   border-radius: 8px;
+}
+.joinMeetupContainer .joinMeetupText #joinMeetupBtn:hover {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  width: 132px;
+  height: 42px;
+  transition: all 0.2s ease;
 }
 
 .eventsNearContainer {
@@ -212,6 +229,9 @@ button:hover {
   color: #00798a;
   text-decoration: none;
   padding-right: 5px;
+}
+.eventsNearContainer .eventsHeader a:hover {
+  text-decoration: underline;
 }
 
 .eventsNearList {
@@ -341,6 +361,11 @@ button:hover {
   background-color: #e32359;
   color: #ffffff;
   border-radius: 8px;
+}
+.joinMeetupSignupContainer .joinMeetupDescription #signUpBtn:hover {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 600;
 }
 
 .topCategoriesContainer {
@@ -523,6 +548,9 @@ button:hover {
   text-decoration: none;
   cursor: pointer;
 }
+.friendshipsContainer .articles .article a:hover {
+  text-decoration: underline;
+}
 
 .main2 {
   display: flex;
@@ -535,7 +563,7 @@ button:hover {
 .filterContainer {
   display: flex;
   flex-direction: column;
-  gap: 21px;
+  gap: 12px;
   margin-bottom: 34px;
 }
 .filterContainer h1 {
@@ -548,8 +576,9 @@ button:hover {
   font-size: 20px;
   line-height: 28px;
   font-weight: 500;
-  -webkit-text-decoration: underline 4px solid #00798a;
-          text-decoration: underline 4px solid #00798a;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 4px solid #00798a;
   color: #00798a;
 }
 .filterContainer .selectContainer {
@@ -557,7 +586,8 @@ button:hover {
   gap: 17px;
 }
 .filterContainer .selectContainer select {
-  width: 200px;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 46px;
   background-color: #f6f7f8;
   color: #212121;
@@ -565,9 +595,18 @@ button:hover {
   border: none;
   outline: none;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 15px;
   font-weight: 500;
-  padding: 0px 16px;
+  padding-left: 16px;
+  padding-right: 42px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../assets/icons/selectIcon.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: right 16px top 50%, 0 0;
+  background-size: 14px auto, 100%;
+  cursor: pointer;
 }
 
 .mapContainer {
@@ -597,8 +636,8 @@ button:hover {
 .mapContainer .map .middleMap {
   position: absolute;
   top: 50%;
-  right: 50%;
-  transform: translateX(50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 172px;
   height: 40px;
   background-color: #ffffff;
@@ -760,6 +799,13 @@ button:hover {
   font-weight: 600;
   border: 2px solid #ffffff;
 }
+.footer .footerHeader button:hover {
+  box-shadow: 1px 1px 1px 1px #c5c4c4;
+  width: 125px;
+  height: 46px;
+  font-size: 20px;
+  line-height: 26px;
+}
 .footer .footerHeader .line {
   display: none;
   border-color: #707070;
@@ -832,6 +878,111 @@ button:hover {
 }
 .footer .footerClosingLinks .footerClosingFirstLink {
   color: #ffffff;
+}
+
+.modalSignUp,
+.modalLogin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  transition: top 1s linear;
+}
+
+.modalContentSignup,
+.modalContentLogin {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.9647058824);
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 5px;
+  background-image: linear-gradient(to top, #ffffff 0%, #707070 100%);
+}
+
+.modalHidden {
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  transition: top 1s linear;
+}
+
+#closeModalSignup,
+#closeModalLogin {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  cursor: pointer;
+}
+
+.signupForm,
+.loginForm {
+  width: 340px;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 16px;
+  padding: 20px 10px;
+}
+.signupForm label,
+.loginForm label {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: #212121;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signupForm label input,
+.loginForm label input {
+  border: none;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 4px 30px;
+}
+.signupForm .modalBtns,
+.loginForm .modalBtns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
+#signupBtn,
+#loginBtn {
+  width: 125px;
+  height: 40px;
+  background-color: #e32359;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+#resetSignupBtn,
+#resetLoginBtn {
+  width: 125px;
+  height: 40px;
+  background-color: #00798a;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  outline: none;
 }
 
 @media screen and (max-width: 1510px) {
@@ -1312,6 +1463,10 @@ button:hover {
     font-weight: 400;
     margin-top: 3px;
   }
+  .main2 {
+    padding-right: 0px;
+    padding-left: 12px;
+  }
   .filterContainer {
     gap: 12px;
     margin-bottom: 18px;
@@ -1328,7 +1483,25 @@ button:hover {
     font-weight: 500;
   }
   .filterContainer .selectContainer {
+    padding-bottom: 10px;
     gap: 19px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  .filterContainer .selectContainer::-webkit-scrollbar {
+    background-color: FAFAFA;
+    border-radius: 30px;
+    height: 10px;
+  }
+  .filterContainer .selectContainer::-webkit-scrollbar-thumb {
+    background-color: #7d7d7d;
+    border-radius: 30px;
+    height: 8px;
+    width: 95%;
+  }
+  .eventsNearNYContainer {
+    padding-right: 11px;
   }
   .onlineSignAbsolute {
     display: none;

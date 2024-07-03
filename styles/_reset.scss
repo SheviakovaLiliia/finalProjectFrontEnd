@@ -12,6 +12,11 @@ button:hover {
   box-shadow: 2px 2px 2px 2px black;
   font-size: large;
   font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .nav,

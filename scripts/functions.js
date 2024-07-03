@@ -145,3 +145,26 @@ function filterEvents() {
     eventsNearNYContainer.textContent = "No events found...";
   }
 }
+
+function toggleModalHiddenS() {
+  modalSignup.classList.toggle("modalHidden");
+}
+function toggleModalHiddenL() {
+  modalLogin.classList.toggle("modalHidden");
+}
+
+// function closeOrOpenModal(el1, el2, el3) {
+//   el1.addEventListener("click", toggleModalHidden);
+//   el2.addEventListener("click", toggleModalHidden);
+//   el3.addEventListener("click", toggleModalHidden);
+// }
+
+function closeOrOpenModal(el1, el2, el3, func) {
+  el1.addEventListener("click", func);
+  el2.addEventListener("click", func);
+  el3.addEventListener("click", func);
+}
+
+function stopPropag(e) {
+  e.stopPropagation();
+}
