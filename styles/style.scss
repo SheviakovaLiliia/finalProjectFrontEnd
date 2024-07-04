@@ -199,7 +199,7 @@
 .onlineEventsContainer {
   @include flexColumn;
   gap: 24px;
-  margin-top: 40px;
+  margin: 40px 0px;
   h2 {
     @include fontsizeLineheightFontWeight(28px, 36px, 600);
   }
@@ -298,7 +298,6 @@
   }
   .cities {
     @include flexCentred;
-    // display: flex;
     flex-wrap: wrap;
     gap: 42px;
     .city {
@@ -320,7 +319,6 @@
     @include fontsizeLineheightFontWeight(28px, 36px, 600);
   }
   .howMeetupWorks {
-    // display: flex;
     @include flexCentred;
     flex-wrap: wrap;
     gap: 32px;
@@ -437,6 +435,13 @@
     }
   }
 }
+.filterContainer .selectContainer select option {
+  background-color: #f6f7f8;
+  font-size: 15px;
+  font-weight: 500;
+  color: #707070;
+  padding: 5px;
+}
 .mapContainer {
   position: absolute;
   @include topRight(64px, 133px);
@@ -480,7 +485,7 @@
 .eventsNearNYContainer {
   @include flexColumn;
   max-width: 604px;
-  margin-bottom: 100px;
+  margin-bottom: 36px;
 }
 .eventsNearNYCard {
   display: flex;
@@ -532,7 +537,7 @@
 .onlineSignStatic {
   display: none;
   order: 4;
-  @include fontsizeLineheightFontWeight(8px, 8px, 500);
+  @include fontsizeLineheightFontWeight(9px, 9px, 500);
 }
 .onlineSignSImg {
   @include widthHeight(9px, 9px);
@@ -542,7 +547,7 @@
 .footer {
   @include flexColumn;
   background-color: #212121;
-  padding: 24px 13%; //padding calculate
+  padding: 16px 13%;
   gap: 24px;
   .footerHeader {
     @include flexDirJustAligGap(row, start, start, 16px);
@@ -686,7 +691,7 @@
     input {
       border: none;
       @include borderOutlineNone;
-      // background-color: #f2f8f9;
+
       border-radius: 8px;
       padding: 4px 30px;
     }
@@ -714,7 +719,7 @@
 }
 .notifications {
   position: absolute;
-  @include topRight(0, 0);
+  @include topRight(0, 20px);
   @include widthHeight(380px, 200px);
   @include flexColumn;
   padding: 10px;

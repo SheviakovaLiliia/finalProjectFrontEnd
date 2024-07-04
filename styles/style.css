@@ -292,7 +292,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-top: 40px;
+  margin: 40px 0px;
 }
 .onlineEventsContainer h2 {
   font-size: 28px;
@@ -609,6 +609,14 @@ a:hover {
   cursor: pointer;
 }
 
+.filterContainer .selectContainer select option {
+  background-color: #f6f7f8;
+  font-size: 15px;
+  font-weight: 500;
+  color: #707070;
+  padding: 5px;
+}
+
 .mapContainer {
   position: absolute;
   top: 64px;
@@ -671,7 +679,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   max-width: 604px;
-  margin-bottom: 100px;
+  margin-bottom: 36px;
 }
 
 .eventsNearNYCard {
@@ -754,8 +762,8 @@ a:hover {
 .onlineSignStatic {
   display: none;
   order: 4;
-  font-size: 8px;
-  line-height: 8px;
+  font-size: 9px;
+  line-height: 9px;
   font-weight: 500;
 }
 
@@ -768,7 +776,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   background-color: #212121;
-  padding: 24px 13%;
+  padding: 16px 13%;
   gap: 24px;
 }
 .footer .footerHeader {
@@ -1002,7 +1010,7 @@ a:hover {
 .notifications {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 20px;
   width: 380px;
   height: 200px;
   display: flex;
@@ -1313,6 +1321,13 @@ a:hover {
   }
 }
 @media screen and (max-width: 400px) {
+  .main {
+    padding: 30px 0px;
+  }
+  .joinMeetupContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   .joinMeetupContainer .joinMeetupText {
     gap: 20px;
   }
@@ -1330,6 +1345,8 @@ a:hover {
     align-self: center;
   }
   .eventsNearContainer {
+    margin-left: 20px;
+    margin-right: 20px;
     gap: 11px;
   }
   .eventsNearContainer .eventsHeader .eventsHeaderLeft {
@@ -1407,6 +1424,8 @@ a:hover {
     display: none;
   }
   .onlineEventsContainer {
+    margin-left: 20px;
+    margin-right: 20px;
     gap: 11px;
     margin-bottom: 50px;
   }
@@ -1419,8 +1438,10 @@ a:hover {
     display: none;
   }
   .joinMeetupSignupContainer {
+    display: block;
     margin-bottom: 0px;
     padding: 15px 16px;
+    gap: 0px;
   }
   .joinMeetupSignupContainer .joinMeetupDescription h2 {
     font-size: 20px;
@@ -1437,6 +1458,8 @@ a:hover {
     margin-bottom: 16px;
   }
   .topCategoriesContainer {
+    margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 48px;
   }
   .topCategoriesContainer h2 {
@@ -1450,6 +1473,8 @@ a:hover {
     row-gap: 11px;
   }
   .popularCitiesContainer {
+    margin-left: 20px;
+    margin-right: 20px;
     gap: 0px;
   }
   .popularCitiesContainer h2 {
@@ -1473,6 +1498,10 @@ a:hover {
     font-size: 15px;
     line-height: 21px;
     font-weight: 600;
+  }
+  .howMeetupWorksContainer {
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .howMeetupWorksContainer h2 {
     font-size: 20px;
@@ -1507,6 +1536,10 @@ a:hover {
     font-size: 10px;
     line-height: 15px;
     font-weight: 500;
+  }
+  .friendshipsContainer {
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .friendshipsContainer h2 {
     font-size: 20px;
@@ -1572,6 +1605,7 @@ a:hover {
     width: 95%;
   }
   .eventsNearNYContainer {
+    margin-bottom: 30px;
     padding-right: 11px;
   }
   .onlineSignAbsolute {
@@ -1590,5 +1624,16 @@ a:hover {
   }
   .footerHeader button {
     margin-right: 7px;
+  }
+  .notifications {
+    top: 0;
+    right: 5px;
+    width: 370px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: end;
+    gap: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

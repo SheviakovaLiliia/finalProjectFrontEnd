@@ -237,7 +237,12 @@
   }
 }
 @media screen and (max-width: 400px) {
+  .main {
+    padding: 30px 0px;
+  }
   .joinMeetupContainer {
+    margin-left: 20px;
+    margin-right: 20px;
     .joinMeetupText {
       gap: 20px;
       p {
@@ -253,6 +258,8 @@
     }
   }
   .eventsNearContainer {
+    margin-left: 20px;
+    margin-right: 20px;
     gap: 11px;
     .eventsHeader {
       .eventsHeaderLeft {
@@ -312,6 +319,8 @@
     }
   }
   .onlineEventsContainer {
+    margin-left: 20px;
+    margin-right: 20px;
     gap: 11px;
     margin-bottom: 50px;
     h2 {
@@ -324,12 +333,15 @@
     }
   }
   .joinMeetupSignupContainer {
+    display: block;
     margin-bottom: 0px;
     padding: 15px 16px;
+    gap: 0px;
     .joinMeetupDescription {
       h2 {
         @include fontsizeLineheightFontWeight(20px, 36px, 600);
       }
+
       p {
         @include fontsizeLineheightFontWeight(12px, 24px, 400);
       }
@@ -340,6 +352,8 @@
     }
   }
   .topCategoriesContainer {
+    margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 48px;
     h2 {
       @include fontsizeLineheightFontWeight(20px, 36px, 600);
@@ -350,6 +364,8 @@
     }
   }
   .popularCitiesContainer {
+    margin-left: 20px;
+    margin-right: 20px;
     gap: 0px;
     h2 {
       @include fontsizeLineheightFontWeight(20px, 36px, 600);
@@ -369,6 +385,8 @@
     }
   }
   .howMeetupWorksContainer {
+    margin-left: 20px;
+    margin-right: 20px;
     h2 {
       @include fontsizeLineheightFontWeight(20px, 36px, 600);
     }
@@ -396,6 +414,8 @@
     }
   }
   .friendshipsContainer {
+    margin-left: 10px;
+    margin-right: 10px;
     h2 {
       @include fontsizeLineheightFontWeight(20px, 36px, 600);
     }
@@ -454,6 +474,7 @@
     }
   }
   .eventsNearNYContainer {
+    margin-bottom: 30px;
     padding-right: 11px;
   }
   .onlineSignAbsolute {
@@ -472,5 +493,13 @@
     button {
       margin-right: 7px;
     }
+  }
+  .notifications {
+    @include topRight(0, 5px);
+    @include widthHeight(370px, 160px);
+    @include flexColumn;
+    padding: 10px;
+    align-items: end;
+    gap: 10px;
   }
 }
