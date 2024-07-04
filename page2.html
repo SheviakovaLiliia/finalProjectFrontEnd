@@ -157,16 +157,25 @@
           alt="Close"
         />
         <form class="signupForm">
-          <label>First Name<input type="text" placeholder="" required /></label>
-          <label>Last Name<input type="text" placeholder="" required /></label>
-          <label>Email<input type="email" placeholder="" required /></label>
-          <label>Password<input type="text" placeholder="" required /></label>
+          <label
+            >First Name *<input id="firstNameSignup" type="text" placeholder=""
+          /></label>
+          <label
+            >Last Name *<input id="lastNameSignup" type="text" placeholder=""
+          /></label>
+          <label
+            >Email *<input id="emailSignup" type="text" placeholder=""
+          /></label>
+          <label
+            >Password *<input id="passwordSignup" type="text" placeholder=""
+          /></label>
           <div class="modalBtns">
             <button id="signupBtn">Sign Up</button>
             <button id="resetSignupBtn">Reset</button>
           </div>
         </form>
       </div>
+      <div class="notifications notificationsSignup"></div>
     </div>
     <div class="modalLogin modalHidden">
       <div class="modalContentLogin">
@@ -176,20 +185,21 @@
           alt="Close"
         />
         <form class="loginForm">
-          <label>Email<input type="email" placeholder="" required /></label>
-          <label>Password<input type="text" placeholder="" required /></label>
+          <label
+            >Email<input id="emailLogin" type="text" placeholder=""
+          /></label>
+          <label
+            >Password<input id="passwordLogin" type="text" placeholder=""
+          /></label>
           <div class="modalBtns">
             <button id="loginBtn">Log In</button>
             <button id="resetLoginBtn">Reset</button>
           </div>
         </form>
       </div>
+      <div class="notifications notificationsLogin"></div>
     </div>
 
-    <script src="scripts/vars.js"></script>
-    <script src="scripts/data.js"></script>
-    <script src="scripts/functions.js"></script>
     <script src="scripts/script2.js"></script>
-    <!-- <script src="scripts/functions.js"></script> -->
   </body>
 </html>

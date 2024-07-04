@@ -920,9 +920,17 @@ a:hover {
 #closeModalSignup,
 #closeModalLogin {
   position: absolute;
-  top: 3px;
-  right: 3px;
+  top: 4px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
+}
+
+#closeModalSignup:hover,
+#closeModalLogin:hover {
+  width: 24px;
+  height: 24px;
 }
 
 .signupForm,
@@ -934,7 +942,7 @@ a:hover {
   flex-direction: column;
   gap: 10px;
   border-radius: 16px;
-  padding: 20px 10px;
+  padding: 22px 15px;
 }
 .signupForm label,
 .loginForm label {
@@ -967,24 +975,87 @@ a:hover {
 #loginBtn {
   width: 125px;
   height: 40px;
-  background-color: #e32359;
+  background-color: #f65858;
   color: #ffffff;
   border-radius: 8px;
   border: none;
   outline: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
 }
 
 #resetSignupBtn,
 #resetLoginBtn {
   width: 125px;
   height: 40px;
-  background-color: #00798a;
+  background-color: #707070;
   color: #ffffff;
   border-radius: 8px;
   border: none;
   outline: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
 }
 
+.notifications {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: end;
+  gap: 10px;
+}
+
+.notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px;
+  width: 360px;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-shadow: 0.5px 0.5px white;
+  border-radius: 10px;
+  background-image: linear-gradient(to top, #ffffff 0%, #707070 100%);
+  animation: fade 1s ease;
+}
+
+.notificationError {
+  color: #e32359;
+  box-shadow: 0px 0px 0px 1px #e32359;
+}
+
+.notificationSuccess {
+  color: #00798a;
+  box-shadow: 0px 0px 0px 1px #00798a;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 @media screen and (max-width: 1510px) {
   .eventsNearList,
   .onlineEventsContainer > .onlineEventsList {

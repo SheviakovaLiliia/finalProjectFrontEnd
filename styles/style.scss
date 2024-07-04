@@ -660,18 +660,22 @@
 #closeModalSignup,
 #closeModalLogin {
   position: absolute;
-  @include topRight(3px, 3px);
+  @include topRight(4px, 4px);
+  @include widthHeight(22px, 22px);
   cursor: pointer;
+}
+#closeModalSignup:hover,
+#closeModalLogin:hover {
+  @include widthHeight(24px, 24px);
 }
 .signupForm,
 .loginForm {
   @include widthHeight(340px, fit-content);
   @include flexColumn;
-
   gap: 10px;
-  // background-color: #f2f8f9;
+
   border-radius: 16px;
-  padding: 20px 10px;
+  padding: 22px 15px;
   label {
     color: #ffffff;
     font-weight: 700;
@@ -698,13 +702,65 @@
 }
 #signupBtn,
 #loginBtn {
-  @include widthHeightBackColRad(125px, 40px, #e32359, #ffffff, 8px);
+  @include widthHeightBackColRad(125px, 40px, #f65858, #ffffff, 8px);
   @include borderOutlineNone;
+  @include fontsizeLineheightFontWeight(16px, 20px, 600);
 }
 #resetSignupBtn,
 #resetLoginBtn {
-  @include widthHeightBackColRad(125px, 40px, #00798a, #ffffff, 8px);
+  @include widthHeightBackColRad(125px, 40px, #707070, #ffffff, 8px);
   @include borderOutlineNone;
+  @include fontsizeLineheightFontWeight(16px, 20px, 600);
+}
+.notifications {
+  position: absolute;
+  @include topRight(0, 0);
+  @include widthHeight(380px, 200px);
+  @include flexColumn;
+  padding: 10px;
+  align-items: end;
+  gap: 10px;
+}
+.notification {
+  @include flexCentred;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px;
+  @include widthHeight(360px, fit-content);
+
+  text-shadow: 0.5px 0.5px white;
+  border-radius: 10px;
+  background-image: linear-gradient(to top, #ffffff 0%, #707070 100%);
+  animation: fade 1s ease;
+}
+.notificationError {
+  color: #e32359;
+  box-shadow: 0px 0px 0px 1px #e32359;
+}
+
+.notificationSuccess {
+  color: #00798a;
+  box-shadow: 0px 0px 0px 1px #00798a;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @import "media";

@@ -42,7 +42,7 @@
       </div>
       <div class="navRight">
         <a href=""><img src="assets/icons/LanguageIcon.svg" alt="" />English</a>
-        <a href="">Log in</a>
+        <a id="openLoginModal" href="">Log in</a>
         <button id="openSignupModalBtn">Sign up</button>
       </div>
     </section>
@@ -545,29 +545,48 @@
         <a class="hiddenEl">Help</a>
       </div>
     </section>
-    <!-- <div class="modalSignUp modalHidden">
+
+    <div class="modalSignUp modalHidden">
       <div class="modalContentSignup">
+        <img
+          id="closeModalSignup"
+          src="assets/icons/closeIcon.svg"
+          alt="Close"
+        />
         <form class="signupForm">
-          <label>First Name<input type="text" placeholder="" required /></label>
-          <label>Last Name<input type="text" placeholder="" required /></label>
-          <label>Email<input type="email" placeholder="" required /></label>
           <label
-            >Password<input type="password" placeholder="" required
+            >First Name *<input id="firstNameSignup" type="text" placeholder=""
+          /></label>
+          <label
+            >Last Name *<input id="lastNameSignup" type="text" placeholder=""
+          /></label>
+          <label
+            >Email *<input id="emailSignup" type="text" placeholder=""
+          /></label>
+          <label
+            >Password *<input id="passwordSignup" type="text" placeholder=""
           /></label>
           <div class="modalBtns">
             <button id="signupBtn">Sign Up</button>
-            <button id="resetSignupBtn" >Reset</button>
+            <button id="resetSignupBtn">Reset</button>
           </div>
         </form>
       </div>
+      <div class="notifications notificationsSignup"></div>
     </div>
     <div class="modalLogin modalHidden">
-
       <div class="modalContentLogin">
+        <img
+          id="closeModalLogin"
+          src="assets/icons/closeIcon.svg"
+          alt="Close"
+        />
         <form class="loginForm">
-          <label>Email<input type="email" placeholder="" required /></label>
           <label
-            >Password<input type="password" placeholder="" required
+            >Email<input id="emailLogin" type="text" placeholder=""
+          /></label>
+          <label
+            >Password<input id="passwordLogin" type="text" placeholder=""
           /></label>
           <div class="modalBtns">
             <button id="loginBtn">Log In</button>
@@ -575,8 +594,8 @@
           </div>
         </form>
       </div>
+      <div class="notifications notificationsLogin"></div>
     </div>
-  </div> -->
     <script src="scripts/script1.js"></script>
   </body>
 </html>
