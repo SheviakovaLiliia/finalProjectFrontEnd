@@ -389,7 +389,7 @@ function validateSignupForm(firstName, lastName, email, password) {
       validatePassword(password)
     ) {
       createNotification(
-        "You signed in succesfully",
+        "You succesfully signed up",
         "notificationSuccess",
         notificationsSignup
       );
