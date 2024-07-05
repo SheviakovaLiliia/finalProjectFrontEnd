@@ -1064,6 +1064,11 @@ a:hover {
     visibility: hidden;
   }
 }
+@media screen and (min-width: 1600px) {
+  .footer {
+    padding: 16px 192px;
+  }
+}
 @media screen and (max-width: 1510px) {
   .eventsNearList,
   .onlineEventsContainer > .onlineEventsList {
